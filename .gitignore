@@ -1,0 +1,27 @@
+# Runtime data
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets and environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+secrets.json
+
+# Build artifacts
+bin/
+dist/
+build/
+*.apk
+*.test
+coverage.out
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
