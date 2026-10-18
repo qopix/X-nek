@@ -1,0 +1,16 @@
+[Unit]
+Description=NEK Agent health scaffold
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+User=nek
+Group=nek
+ExecStart=/opt/nek/nek-agent --listen 127.0.0.1:9091
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+[Install]
+WantedBy=multi-user.target

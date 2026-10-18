@@ -1,0 +1,6 @@
+{
+  "listen": "127.0.0.1:8080",
+  "storage": "data/nek.json",
+  "public_url": "https://panel.example.invalid",
+  "note": "Example only; runtime settings are currently environment variables."
+}
