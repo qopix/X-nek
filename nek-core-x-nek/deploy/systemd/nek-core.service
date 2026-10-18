@@ -1,0 +1,22 @@
+[Unit]
+Description=NEK Core / X-NEK Control Plane
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+User=nek
+Group=nek
+WorkingDirectory=/opt/nek
+Environment=NEK_ADDR=127.0.0.1:8080
+Environment=NEK_DATA=/var/lib/nek/nek.json
+EnvironmentFile=-/etc/nek/nek.env
+ExecStart=/opt/nek/nek-core
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/nek
+ProtectHome=true
+[Install]
+WantedBy=multi-user.target
